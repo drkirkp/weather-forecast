@@ -35,6 +35,7 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   return `${day} ${hours}:${minutes}`;
 }
 
@@ -47,8 +48,7 @@ function searchCity(city) {
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = searchInput.value;
+
   searchCity(searchInput.value);
 }
 
